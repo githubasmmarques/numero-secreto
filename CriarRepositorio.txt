@@ -1,0 +1,54 @@
+#      Criar um novo repositorio na linha de comando
+echo "# numero-secreto" >> README.md
+git init
+git config --global user.email "asmmarques@gmail.com"                           -- Direciona para o email do GITHUB da aula - asmmarques@gmail.com
+git config --global user.name "Alexandre Marques"                               -- Direrciona para o nome - Alexandre Marques
+git add .                                                                       -- Adiciona todos os arquivos que estão na pasta para serem enviados
+git commit -m "Projeto Inicial - Primeiro Commit"                               -- Prepara os arquivos que vão ser enviados
+git branch -M main
+git remote add origin https://github.com/githubasmmarques/numero-secreto.git    -- Vincula o repositorio remoto githubasmmarques/numero-secreto.git ao nosso repositorio local
+git push -u origin main                                                         -- Envia os arquivos, sincornizando as mudanças do repositório local com o repositório remoto
+
+
+Geração de uma chave SSH
+Antes de executar o comando git push, precisamos gerar uma chave SSH. A geração da chave é feita via terminal, com o comando:
+ssh-keygen -t ed25519 -C "asmmarques@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (C:\Users\011534962267/.ssh/id_ed25519):       
+
+Repare, na imagem anterior, que ao executar o comando para gerar uma chave SSH, uma pergunta foi feita e o terminal fica travado esperando nossa resposta:
+Essa primeira pergunta é para indicarmos o diretório em nosso computador no qual a chave será salva, sendo que entre parênteses é indicado o diretório padrão. O recomendado é apenas apertar a tecla enter no teclado para que a chave seja salva no diretório padrão, pois assim o Git consegue encontrar essa chave automaticamente sempre que executarmos o comando git push.
+Após apertar a tecla enter, uma nova pergunta será apresentada no terminal:
+Created directory 'C:\Users\011534962267/.ssh'.
+Enter passphrase (empty for no passphrase):
+Essa segunda pergunta é para indicarmos se desejamos adicionar uma senha à chave SSH que será gerada. Caso você digite uma senha, toda vez que executar o comando git push será necessário digitar tal senha. Ao não digitar nada e apenas apertar a tecla enter, a chave será gerada sem a proteção de uma senha.
+Por fim, a terceira e última pergunta é apenas para confirmar a senha anterior:
+Enter same passphrase again: 
+
+A chave será gerada e a seguinte mensagem será exibida no terminal:
+Your identification has been saved in C:\Users\011534962267/.ssh/id_ed25519.
+Your public key has been saved in C:\Users\011534962267/.ssh/id_ed25519.pub.
+The key fingerprint is:
+SHA256:R8KEU14RGnd6+nWL4F5rHs+EQ3JIy4WFC5sZ1rVNfjk asmmarques@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|       o+ *o+o . |
+|      o+ O =o = .|
+|       .* Oooo E.|
+|         *o++   o|
+|        S o* o. .|
+|         ...=.o..|
+|           ..* o |
+|          . ..B  |
+|           .oo o |
++----[SHA256]-----+
+
+Na primeira linha da mensagem você consegue identificar o diretório no seu computador no qual a chave foi salva. Agora, basta acessar tal diretório para ter acesso à chave SSH.
+Observação: Nesse diretório serão gerados dois arquivos que representam a chave SSH, sendo um para a chave privada (arquivo id_ed25519) e o outro para a chave pública (id_ed25519.pub).
+
+
+Cadastrando a chave SSH no GitHub
+Após gerar a chave, precisamos cadastrá-la em nossa conta do GitHub, para que assim o GitHub consiga nos identificar e autenticar ao executar o comando git push de nosso computador.
+
+Acesse a página de chaves SSH de sua conta no GitHub e clique no botão New SSH key ou Nova chave SSH para realizar o cadastro da chave:
+
