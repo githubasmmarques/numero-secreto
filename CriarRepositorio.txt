@@ -3,13 +3,18 @@ echo "# numero-secreto" >> README.md
 git init
 git config --global user.email "asmmarques@gmail.com"                           -- Direciona para o email do GITHUB da aula - asmmarques@gmail.com
 git config --global user.name "Alexandre Marques"                               -- Direrciona para o nome - Alexandre Marques
-git add .                                                                       -- Adiciona todos os arquivos que estão na pasta para serem enviados
+git add .                                                                       -- Adiciona todos os arquivos que estão na pasta para serem COMMITADOS
 git commit -m "Projeto Inicial - Primeiro Commit"                               -- Prepara os arquivos que vão ser enviados
 git branch -M main
 git remote add origin https://github.com/githubasmmarques/numero-secreto.git    -- Vincula o repositorio remoto githubasmmarques/numero-secreto.git ao nosso repositorio local
 git push -u origin main                                                         -- Envia os arquivos, sincornizando as mudanças do repositório local com o repositório remoto
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------
+Quando alterar o arquivo, para enviar para repositorio remoto, fazer esses 3 comandos:
+git add .                                                                       -- Adiciona todos os arquivos que estão na pasta para serem COMMITADOS
+git commit -m "Projeto Inicial - Primeiro Commit"                               -- Prepara os arquivos que vão ser enviados
+git push -u origin main                                                         -- Envia os arquivos, sincornizando as mudanças do repositório local com o repositório remoto
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 PS C:\_BH\Curso\ALURA\17 - Git e GitHub - compartilhando e colaborando em projetos - Numero Secreto> git status
 Your branch is up to date with 'origin/main'.
