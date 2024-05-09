@@ -10,6 +10,47 @@ git remote add origin https://github.com/githubasmmarques/numero-secreto.git    
 git push -u origin main                                                         -- Envia os arquivos, sincornizando as mudanças do repositório local com o repositório remoto
 
 
+
+PS C:\_BH\Curso\ALURA\17 - Git e GitHub - compartilhando e colaborando em projetos - Numero Secreto> git status
+Your branch is up to date with 'origin/main'.
+  (use "git add <file>..." to include in what will be committed)
+        CriarRepositorio.txt
+        git remoto.doc
+        ~$t remoto.doc
+        ~WRL0140.tmp
+nothing added to commit but untracked files present (use "git add" to track)
+
+PS C:\_BH\Curso\ALURA\17 - Git e GitHub - compartilhando e colaborando em projetos - Numero Secreto> git add .
+
+PS C:\_BH\Curso\ALURA\17 - Git e GitHub - compartilhando e colaborando em projetos - Numero Secreto> git status
+On branch main
+  (use "git restore --staged <file>..." to unstage)
+        new file:   CriarRepositorio.txt
+        new file:   git remoto.doc
+        new file:   ~$t remoto.doc
+        new file:   ~WRL0140.tmp
+
+
+
+
+Um commit deve ser realizado sempre que você finalizar uma tarefa específica ou resolver algum bug. Isso mantém o histórico de commits claro e rastreável, de modo que seja possível entender o que foi feito em cada commit.
+EXEMPLO
+git commit -m "Atualizar texto do título da página"
+Assim, é importante realizar commits frequentemente. Porém, evite realizar commits muito pequenos ou muito grandes, pois isso pode tornar difícil o seu entendimento.
+
+Lembre-se de nunca realizar um commit de um código que você sabe que contém bugs. O ideal é que o commit contenha somente código funcional.
+
+O controle de mudanças do Git é feito através dos commits. Cada commit armazena o estado completo do projeto em um determinado momento por meio de um snapshot. Ou seja, cada commit é um registro completo do repositório no momento em que esse commit foi criado.
+
+Como cada commit é uma representação completa e consistente do estado do projeto em um determinado ponto no tempo, isso facilita a rastreabilidade e o entendimento de como se deu a evolução do código ao longo do tempo.
+
+Todo commit conta com um id único e traz uma referência aos commits anteriores. Assim, através dessa cadeia de commits, o Git registra um histórico completo de todos os commits realizados no repositório.
+
+
+git remote      -- Ver os repositorio
+origin
+
+
 Geração de uma chave SSH
 Antes de executar o comando git push, precisamos gerar uma chave SSH. A geração da chave é feita via terminal, com o comando:
 ssh-keygen -t ed25519 -C "asmmarques@gmail.com"
