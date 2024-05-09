@@ -1,5 +1,9 @@
 let listaDeNumerosSorteados = [];
+<<<<<<< HEAD
 let limiteMaximo = 123;
+=======
+let limiteMaximo = 63;
+>>>>>>> 210dbcbdeb69fff213244d60a39751f45ba6c909
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
