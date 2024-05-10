@@ -5,5 +5,6 @@ Nosso **primeiro exemplo** de trecho de texto em markdown.
 Aqui tem uma [página com os códigos mais frequentes](https://en.support.wordprss.com/markdown-quick-reference/) do Markdown
 *Emphasize* _emphasize_
 **Strong** __Strong__
-A [link](http://example.com "Title").
-Logo: ![Alt](/ia.png "Title")
+A [link](http://example.com "Title"). <br>
+Logo: ![Alt](/img/wordpress-logo-32.webp "Titulo Parece ser a Volks Wagen") <br>
+Logo: ![Alt](/img/ia.png "Titulo do ROSTO")
