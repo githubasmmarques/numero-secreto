@@ -6,4 +6,4 @@ Aqui tem uma [página com os códigos mais frequentes](https://en.support.wordpr
 *Emphasize* _emphasize_
 **Strong** __Strong__
 A [link](http://example.com "Title").
-Logo: ![Alt](/wp.png "Title")
+Logo: ![Alt](/ia.png "Title")
